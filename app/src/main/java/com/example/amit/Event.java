@@ -1,5 +1,7 @@
 package com.example.amit;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,7 +12,7 @@ public class Event {
 
     public Group group;
     public Place finalDestination;
-    public List<Place> places;
+    public ArrayList<Place> places;
 
 
 
