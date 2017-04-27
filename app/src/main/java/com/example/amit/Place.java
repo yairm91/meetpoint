@@ -9,16 +9,21 @@ import io.realm.RealmObject;
 
 public class Place extends RealmObject {
 
+    public String name;
     public double longitude;
     public double latitude;
     public String photoUrl;
     public RealmList<User> likes;
     public RealmList<User> disLikes;
 
+    public static int counter = 0;
+    public int ID;
+
     public Place(){
         this.longitude = 0;
         this.latitude = 0;
         this.photoUrl = "";
+        this.ID = counter++;
     }
 
 

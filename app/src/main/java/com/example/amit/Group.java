@@ -20,14 +20,14 @@ public class Group extends RealmObject {
 
     public Group(String groupName){
         this.groupName = groupName;
-        this.users = new RealmList<>();
-        this.events = new RealmList<>();
+        this.users = new RealmList<User>();
+        this.events = new RealmList<Event>();
     }
 
     public Group(String groupName, RealmList<User> users){
         this.groupName = groupName;
         this.users = users;
-        this.events = new RealmList<>();
+        this.events = new RealmList<Event>();
     }
 
     public void addEvent(Event event) {

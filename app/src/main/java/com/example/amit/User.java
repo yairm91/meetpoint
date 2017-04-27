@@ -16,11 +16,14 @@ public class User extends RealmObject {
 
     public double longitude;
     public double latitude;
+
     public RealmList<Group> groups;
     public RealmList<Event> events;
 
     public int userID;
     private static int counter = 0;
+
+
 
     public User(String name, String phone){
         this.userName = name;
@@ -28,9 +31,11 @@ public class User extends RealmObject {
         this.phone = phone;
         this.longitude = 0;
         this.latitude = 0;
-        this.groups = new RealmList<>();
-        this.events = new RealmList<>();
+        this.groups = new RealmList<Group>();
+        this.events = new RealmList<Event>();
     }
+
+
 
 
 }
