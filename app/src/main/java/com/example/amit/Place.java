@@ -5,4 +5,11 @@ package com.example.amit;
  */
 
 class Place {
+
+    public double longitude;
+    public double latitude;
+    public String photoUrl;
+
+
+
 }
