@@ -10,6 +10,12 @@ public class Place {
     public double latitude;
     public String photoUrl;
 
+    public Place(){
+        this.longitude = 0;
+        this.latitude = 0;
+        this.photoUrl = "";
+    }
+
 
 
 }

@@ -11,10 +11,20 @@ import java.util.List;
 public class Event {
 
     public Group group;
-    public Place finalDestination;
+    public double middleLongtitude;
+    public double meddleLatitude;
+    public Place meetPoint;
     public ArrayList<Place> places;
 
 
+    public Event(Group group){
+        this.group = group;
+        this.meetPoint = getmeetPoint();
+        this.places =
 
+    }
 
+    public Place getmeetPoint() {
+        return meetPoint;
+    }
 }
