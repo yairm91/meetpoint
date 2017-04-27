@@ -78,6 +78,16 @@ public class Event extends RealmObject {
                 + Math.pow(u.longitude - middleLongtitude, 2));
     }
 
-
+    public Place chooseMeetPoint(){
+        int max = places.first().numberOfLikes;
+        Place meetPoint = places.first();
+        for (Place p : places){
+            if(p.numberOfLikes > max){
+                max = p.numberOfLikes;
+                meetPoint = p;
+            }
+        }
+        return meetPoint;
+    }
 
 }

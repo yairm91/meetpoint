@@ -13,8 +13,7 @@ public class Place extends RealmObject {
     public double longitude;
     public double latitude;
     public String photoUrl;
-    public RealmList<User> likes;
-    public RealmList<User> disLikes;
+    public int numberOfLikes;
 
     public static int counter = 0;
     public int ID;
@@ -27,6 +26,9 @@ public class Place extends RealmObject {
         this.ID = counter++;
     }
 
+    public void updateLikes(int swipe){
+        numberOfLikes += swipe;
+    }
 
 
 
