@@ -1,10 +1,12 @@
 package com.example.amit;
 
+import io.realm.RealmObject;
+
 /**
  * Created by amitgal on 4/27/17.
  */
 
-public class Place {
+public class Place extends RealmObject {
 
     public double longitude;
     public double latitude;

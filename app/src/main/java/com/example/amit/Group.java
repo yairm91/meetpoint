@@ -4,27 +4,30 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.realm.RealmList;
+import io.realm.RealmObject;
+
 /**
  * Created by amitgal on 4/27/17.
  */
 
-public class Group {
+public class Group extends RealmObject {
 
     public String groupName;
-    public ArrayList<User> users;
-    public ArrayList<Event> events;
+    public RealmList<User> users;
+    public RealmList<Event> events;
 
 
     public Group(String groupName){
         this.groupName = groupName;
-        this.users = new ArrayList<User>();
-        this.events = new ArrayList<Event>();
+        this.users = new RealmList<>();
+        this.events = new RealmList<>();
     }
 
-    public Group(String groupName, ArrayList<User> users){
+    public Group(String groupName, RealmList<User> users){
         this.groupName = groupName;
         this.users = users;
-        this.events = new ArrayList<Event>();
+        this.events = new RealmList<>();
     }
 
     public void addEvent(Event event) {
