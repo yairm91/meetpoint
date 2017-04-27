@@ -23,7 +23,14 @@ public class User extends RealmObject {
     public int userID;
     private static int counter = 0;
 
-
+    public User(){
+        this.userName = "";
+        this.phone = "";
+        this.latitude = 0;
+        this.longitude =0;
+        this.groups = null;
+        this.events = null;
+    }
 
     public User(String name, String phone){
         this.userName = name;

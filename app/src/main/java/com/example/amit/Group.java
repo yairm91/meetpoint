@@ -17,6 +17,12 @@ public class Group extends RealmObject {
     public RealmList<User> users;
     public RealmList<Event> events;
 
+    public Group(){
+        this.groupName = "";
+        this.users = null;
+        this.events =null;
+    }
+
 
     public Group(String groupName){
         this.groupName = groupName;

@@ -20,6 +20,7 @@ public class Place extends RealmObject {
     public int ID;
 
     public Place(){
+        this.name = "";
         this.longitude = 0;
         this.latitude = 0;
         this.photoUrl = "";
