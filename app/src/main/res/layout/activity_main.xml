@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.sivan.hackidc2017.MainActivity">
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="300dp"
-        android:layout_height="199dp"
-        android:foregroundGravity="center_horizontal"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="16dp" />
 
     <TableLayout
         android:layout_width="300dp"
