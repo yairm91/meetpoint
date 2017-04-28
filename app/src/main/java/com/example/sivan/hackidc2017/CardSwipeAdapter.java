@@ -1,7 +1,6 @@
 package com.example.sivan.hackidc2017;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -61,7 +60,6 @@ public class CardSwipeAdapter extends BaseAdapter {
 
         nameOfPlace.setText(place.name);
         descOfPlace.setText(place.numberOfLikes + " likes");
-        view.setBackgroundColor(Color.MAGENTA);
         return view;
     }
 }

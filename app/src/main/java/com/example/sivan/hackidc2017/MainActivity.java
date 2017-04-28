@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         existingGroups[0] = new Group("no members");
         existingGroups[1] = new Group("some members", userRealmList1);
-        existingGroups[2] = new Group("no members", userRealmList2);
+        existingGroups[2] = new Group("more members", userRealmList2);
 
         ArrayAdapter adapter = new ArrayAdapter<Group>(this, R.layout.activity_listview, existingGroups);
 
