@@ -2,6 +2,8 @@ package com.example.amit;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.annotations.LinkingObjects;
+
 import java.lang.Integer;
 
 /**
@@ -17,7 +19,8 @@ public class User extends RealmObject {
     public double longitude;
     public double latitude;
 
-    public RealmList<Group> groups;
+    @LinkingObjects("users")
+    public final RealmList<Group> groups = null;
     public RealmList<Event> events;
 
     public int userID;
