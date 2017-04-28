@@ -1,10 +1,8 @@
 package com.example.amit;
 
-import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.RealmResults;
 import io.realm.annotations.LinkingObjects;
-
-import java.lang.Integer;
 
 /**
  * Created by amitgal on 4/27/17.
@@ -20,8 +18,8 @@ public class User extends RealmObject {
     public double latitude;
 
     @LinkingObjects("users")
-    public final RealmList<Group> groups = null;
-    public RealmList<Event> events;
+    public final RealmResults<Group> groups = null;
+//    public RealmList<Event> events;
 
     public int userID;
     private static int counter = 0;
@@ -31,7 +29,7 @@ public class User extends RealmObject {
         this.phone = "";
         this.latitude = 0;
         this.longitude =0;
-        this.events = null;
+//        this.events = null;
     }
 
     public User(String name, String phone){
@@ -40,7 +38,7 @@ public class User extends RealmObject {
         this.phone = phone;
         this.longitude = 0;
         this.latitude = 0;
-        this.events = new RealmList<Event>();
+//        this.events = new RealmList<Event>();
     }
 
 

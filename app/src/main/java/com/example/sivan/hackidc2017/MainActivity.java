@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.R;
 import com.example.amit.Group;
 import com.example.amit.User;
 
@@ -52,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.group_list);
         settingsImageView = (ImageView) findViewById(R.id.settings_pic);
         button = (Button) findViewById(R.id.create_new_group_button);
-        ListView listView = (ListView) findViewById(R.id.group_list);
         listView.setAdapter(adapter);
 
         button.setOnClickListener(new View.OnClickListener() {

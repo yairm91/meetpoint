@@ -2,9 +2,13 @@ package com.example.sivan.hackidc2017;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ArrayAdapter;
 
+import com.example.R;
+import com.example.amit.Place;
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
+
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 /**
  * Created by Sivan on 28-Apr-17.
@@ -12,7 +16,8 @@ import com.lorentzos.flingswipe.SwipeFlingAdapterView;
 
 public class SwipeActivity extends AppCompatActivity {
     SwipeFlingAdapterView flingContainer;
-    ArrayAdapter<String> arrayAdapter;
+    CardSwipeAdapter arrayAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +26,37 @@ public class SwipeActivity extends AppCompatActivity {
 
         flingContainer = (SwipeFlingAdapterView) findViewById(R.id.swipe_FlingLayout);
 
-        arrayAdapter = new ArrayAdapter<String>(this, R.layout.swipe_cards_atributes, al);
+        Realm realm = Realm.getDefaultInstance();
+        RealmResults<Place> places = realm.where(Place.class).findAll();
 
-//        mBtGoBack.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                finish();
-//            }
-//        });
+        arrayAdapter = new CardSwipeAdapter(this, R.layout.swipe_cards_atributes, places);
+
+        flingContainer.setAdapter(arrayAdapter);
+        flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
+            @Override
+            public void removeFirstObjectInAdapter() {
+
+            }
+
+            @Override
+            public void onLeftCardExit(Object o) {
+
+            }
+
+            @Override
+            public void onRightCardExit(Object o) {
+
+            }
+
+            @Override
+            public void onAdapterAboutToEmpty(int i) {
+
+            }
+
+            @Override
+            public void onScroll(float v) {
+
+            }
+        });
     }
 }

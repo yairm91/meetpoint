@@ -1,12 +1,7 @@
 package com.example.amit;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-
 import io.realm.RealmList;
 import io.realm.RealmObject;
-import io.realm.annotations.LinkingObjects;
 
 /**
  * Created by amitgal on 4/27/17.
@@ -14,8 +9,8 @@ import io.realm.annotations.LinkingObjects;
 
 public class Event extends RealmObject {
 
-    @LinkingObjects("events")
-    public final Group group = null;
+//    @LinkingObjects("events")
+    public Group group = null;
 
     public double middleLongtitude;
     public double middleLatitude;
@@ -41,7 +36,6 @@ public class Event extends RealmObject {
         this.radius = findRadius();
         this.ID = counter++;
     }
-
 
     private double findMiddleLatitude() {
         double ans = 0;
