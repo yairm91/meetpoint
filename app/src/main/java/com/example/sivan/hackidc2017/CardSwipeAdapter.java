@@ -55,11 +55,11 @@ public class CardSwipeAdapter extends BaseAdapter {
         TextView descOfPlace = (TextView) view.findViewById(R.id.placeDescription);
 
         nameOfPlace.setTypeface(null, Typeface.BOLD);
-        nameOfPlace.setTextSize(TypedValue.COMPLEX_UNIT_PX,18);
-        descOfPlace.setTextSize(TypedValue.COMPLEX_UNIT_PX,14);
+        nameOfPlace.setTextSize(TypedValue.COMPLEX_UNIT_PX,50);
+        descOfPlace.setTextSize(TypedValue.COMPLEX_UNIT_PX,50);
 
         nameOfPlace.setText(place.name);
-        descOfPlace.setText(place.numberOfLikes + " likes");
+        descOfPlace.setText("All you can drink in several price ranges.");
         return view;
     }
 }

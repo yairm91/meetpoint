@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         existingGroups[1] = new Group("some members", userRealmList1);
         existingGroups[2] = new Group("more members", userRealmList2);
 
-        strings[0] = "<b>"+"Army guys</b>\n\nAmy, Dana, Amit, Liad";
+        strings[0] = "Army guys\n\nAmy, Dana, Amit, Liad";
         strings[1] = "BFF\n\nLiron";
         strings[2] = "EilatIDC 2017\n\nAlex, Adar, Ben, Gili, Noam, Yair";
 

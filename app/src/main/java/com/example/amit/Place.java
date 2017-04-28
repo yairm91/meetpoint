@@ -1,6 +1,5 @@
 package com.example.amit;
 
-import io.realm.RealmList;
 import io.realm.RealmObject;
 
 /**
@@ -10,6 +9,7 @@ import io.realm.RealmObject;
 public class Place extends RealmObject {
 
     public String name;
+//    public String description;
     public double longitude;
     public double latitude;
     public String photoUrl;
@@ -24,6 +24,7 @@ public class Place extends RealmObject {
         this.latitude = 0;
         this.photoUrl = "";
         this.ID = counter++;
+//        this.description = "";
     }
 
     public void updateLikes(int swipe){
