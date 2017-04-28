@@ -10,6 +10,7 @@ import io.realm.RealmConfiguration;
 import io.realm.RealmList;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
+import com.example.amit.Generator;
 
 /**
  * Created by RoniBM on 27/04/2017.
@@ -69,5 +70,7 @@ public class RealmManager {
             addModel(g1);
             addModel(g2);
         }
+        Generator.generatePlace();
+
     }
 }

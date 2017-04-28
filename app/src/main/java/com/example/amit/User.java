@@ -31,7 +31,6 @@ public class User extends RealmObject {
         this.phone = "";
         this.latitude = 0;
         this.longitude =0;
-        this.groups = null;
         this.events = null;
     }
 
@@ -41,7 +40,6 @@ public class User extends RealmObject {
         this.phone = phone;
         this.longitude = 0;
         this.latitude = 0;
-        this.groups = new RealmList<Group>();
         this.events = new RealmList<Event>();
     }
 

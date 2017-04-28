@@ -6,6 +6,7 @@ import java.util.List;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.annotations.LinkingObjects;
 
 /**
  * Created by amitgal on 4/27/17.
@@ -13,7 +14,9 @@ import io.realm.RealmObject;
 
 public class Event extends RealmObject {
 
-    public Group group;
+    @LinkingObjects("events")
+    public final Group group = null;
+
     public double middleLongtitude;
     public double middleLatitude;
     public Place meetPoint;
@@ -25,7 +28,6 @@ public class Event extends RealmObject {
 
 
     public Event() {
-        this.group = null;
         this.middleLongtitude = 0;
         this.middleLatitude = 0;
         this.meetPoint = null;
@@ -34,7 +36,6 @@ public class Event extends RealmObject {
         this.ID = counter++;
     }
     public Event(Group group){
-        this.group = group;
         this.middleLongtitude = findMiddleLongtitude();
         this.middleLatitude = findMiddleLatitude();
         this.radius = findRadius();

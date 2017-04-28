@@ -30,6 +30,4 @@ public class Place extends RealmObject {
         numberOfLikes += swipe;
     }
 
-
-
 }
