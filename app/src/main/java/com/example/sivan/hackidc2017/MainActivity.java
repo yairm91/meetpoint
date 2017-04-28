@@ -1,7 +1,9 @@
 package com.example.sivan.hackidc2017;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -52,5 +54,17 @@ public class MainActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.create_new_group_button);
         ListView listView = (ListView) findViewById(R.id.group_list);
         listView.setAdapter(adapter);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity();
+            }
+        });
+
+    }
+
+    private void startActivity() {
+        Intent intent = new Intent(this, SwipeActivity.class);
+        startActivity(intent);
     }
 }
