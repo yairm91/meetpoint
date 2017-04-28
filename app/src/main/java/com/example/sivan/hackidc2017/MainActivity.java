@@ -19,6 +19,7 @@ import io.realm.RealmList;
 public class MainActivity extends AppCompatActivity {
 
     Group[] existingGroups = new Group[3];
+    String[] strings = new String[3];
     ImageView profilePicImageView;
     ImageView editImageView;
     ImageView settingsImageView;
@@ -45,7 +46,11 @@ public class MainActivity extends AppCompatActivity {
         existingGroups[1] = new Group("some members", userRealmList1);
         existingGroups[2] = new Group("more members", userRealmList2);
 
-        ArrayAdapter adapter = new ArrayAdapter<Group>(this, R.layout.activity_listview, existingGroups);
+        strings[0] = "<b>"+"Army guys</b>\n\nAmy, Dana, Amit, Liad";
+        strings[1] = "BFF\n\nLiron";
+        strings[2] = "EilatIDC 2017\n\nAlex, Adar, Ben, Gili, Noam, Yair";
+
+        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_listview, strings);
 
         profilePicImageView = (ImageView) findViewById(R.id.my_profile_pic);
         editImageView = (ImageView) findViewById(R.id.edit_pic);
